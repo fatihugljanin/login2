@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
+
+/******************************
+              Global style 
+******************************/
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  color: #0d2841;
+  background-color: white;
+  margin: 0;
+  padding: 1px;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+/******************************
+              Layout 
+******************************/
+.container {
+  width: 400px;
+  margin: 100px auto;
+  /* outline: 1px dotted red; */
+}
+
+/******************************
+              Specific style 
+******************************/
+
+.mobile-holder {
+  padding: 60px 40px;
+  border-radius: 20px;
+  width: 379px;
+  box-shadow: 0 0 8px rgba(27, 26, 26, 0.8);
+}
+nav {
+  width: 230px;
+  margin-top: 20px;
+}
+nav ul li {
+  float: left;
+  text-align: center;
+}
+nav ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #29537a;
+  font-weight: 600;
+  font-size: 30px;
+}
+/* nav ul li a:focus {
+  color: #29537a !important;
+} */
+.kosa-crta {
+  color: #29537a;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 10px;
+}
+.log-in {
+  color: #b0b0b0;
+}
+.mobile-holder p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #29537a;
+}
+.icon {
+  width: 80px;
+  margin: 50px auto;
+}
+.icon svg {
+  padding: 15px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #b0b0b0;
+  text-align: center;
+}
+
+/* FORM: */
+.userEmail,
+.userPassword {
+  color: #29537a;
+  font-weight: 600;
+}
+#userEmail,
+#userPassword {
+  border-top: white;
+  border-right: white;
+  border-left: white;
+  border-radius: 0 5px 5px 5px;
+  width: 100%;
+  margin: 5px 0;
+
+  box-shadow: 0 7px 8px rgba(240, 240, 240, 0.8);
+}
+#userEmail {
+  margin-bottom: 30px;
+}
+#terms {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.terms-l {
+  font-size: 12px;
+  font-weight: 500;
+  color: #29537a;
+}
+.terms-l button {
+  font-weight: 800;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+p {
+  text-align: center;
+}
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.box-1 {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-1 {
+  background-color: #669cff;
+  text-align: center;
+}
+.btn-one {
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.btn-one:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+/******************************
+              Helper 
+******************************/
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ' ';
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+
+/* Na a od navigacije da bude na fokus. Znaci Dino neces imat boje ti ida dajes nego npr dajes globalnu boju za a = siva. a na fokus stanje plava tamna. */
